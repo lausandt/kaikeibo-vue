@@ -10,4 +10,10 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+# for migrations
+# docker-compose exec backend aerich migrate
+# docker-compose exec backend aerich upgrade
+# COPY migrations .
+# COPY pyproject.toml .
+
 COPY src/ .
